@@ -15,6 +15,28 @@ const changeTurn = () =>{
     return turn === 'X' ? turn = 'O': turn = 'X';
 }
 
+// if win
+const checkWin = () => {
+    let contentBox = document.getElementsByClassName('contentBox');
+
+    let win = [
+        [0 , 1 , 2],
+        [0 , 3 , 6],
+        [0 , 4 , 8],
+        [1 , 4 , 7],
+        [2 , 5 , 8],
+        [2 , 4 , 6],
+        [3 , 4 , 5], 
+        [6 , 7 , 8],    
+    ]
+
+    win.forEach(e=>{
+        if((contentBox[e[0]].innerText === contentBox[e[1]].innerText) && (contentBox[e[1]].innerText === contentBox[e[2]].innerText) && (contentBox[e[0]].innerText != " " ) ){
+            
+        }
+    })
+}
+
 // Take all the boxes
 let boxes = document.getElementsByClassName('box');
 
@@ -25,6 +47,8 @@ Array.from(boxes).forEach(element =>{
         if(!element.innerText){
             element.innerText= turn ;
             changeTurn();
+
+            checkWin();
         }
         
     });

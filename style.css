@@ -113,47 +113,28 @@ input{
     position: absolute;
     left: 15%;
 }
-.p-img{
+.player1result{
+    width:fit-content;
+    /* background-color: pink; */
+    font-size: 8vw;
+    font-weight: 600;
+    color: green;
     position: absolute;
-    max-width: 30%;
-}
-.patric{
-    right:13%;
-    top:25%;
-}
-.spongebob{
-    left:10%;
-    top:25%;
-}
-
-/* loose */
-.P-lose{
-    right:5%;
-    top:25%;
-    max-width: 20%;
-    display: none;
-}
-.S-lose{
-    left:10%;
-    top:25%;
-    max-width: 20%;
-    display: none;
-}
-
-/* Won */
-.P-won{
-    right:8%;
-    top:25%;
-    max-width: 50%;
-    display: none;
-}
-.S-won{
+    top:35%;
     left:8%;
-    top:25%;
-    max-width: 20%;
     display: none;
 }
-
+.player2result{
+    width:fit-content;
+    /* background-color: pink; */
+    font-size: 8vw;
+    font-weight: 600;
+    color: green;
+    position: absolute;
+    top:35%;
+    right:8%;
+    display: none;
+}
 
 
 .no-blurring{
@@ -173,9 +154,6 @@ input{
     .btn{
         width:20%;
         transform: translateX(-30%);
-    }
-    .p-img{
-        width:15%;
     }
     .container{
         font-size: 5vw;
