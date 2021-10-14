@@ -71,12 +71,9 @@ input{
     left:50%;
     transform: translate(-50% , -50%);
     cursor: pointer;
-    
-}
-/* .contentBox{
     font-weight: 600;
-    font-size: 24px;
-} */
+    font-size: 3vw;
+}
 .box{
     display: flex;
     justify-content: center;
@@ -179,5 +176,8 @@ input{
     }
     .p-img{
         width:15%;
+    }
+    .container{
+        font-size: 5vw;
     }
 }
