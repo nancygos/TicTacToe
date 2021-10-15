@@ -49,10 +49,10 @@ input{
 }
 
 /* Main Game Page */
-/* .content{
-    uncomment krna h esko
+.content{
+    /* uncomment krna h esko */
     color: transparent;
-} */
+}
 
 .content h1{
     font-size: 2.5vw;
