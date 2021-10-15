@@ -19,12 +19,16 @@
     transform: translate(-50% , -50%);
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 input{
     width:400px;
     height: 5vh;
     max-width: 90%;
     margin:0.5vw 0;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
 }
 .btn{
     width:10vw;
@@ -37,7 +41,7 @@ input{
     font-weight: 600;
 }
 .btn:hover{
-    background:rgb(189, 219, 241);
+    background:rgb(162, 204, 235);
 }
 
 .action{
@@ -48,7 +52,6 @@ input{
 /* .content{
     uncomment krna h esko
     color: transparent;
-    text-shadow: 0 0 10px black;
 } */
 
 .content h1{
@@ -108,32 +111,34 @@ input{
 .player2Corner{
     position: absolute;
     right: 15%;
+    font-size: 2vw;
+    font-weight: 600;
 }
 .player1Corner{
     position: absolute;
     left: 15%;
+    font-size: 2vw;
+    font-weight: 600;
 }
 .player1result{
     width:fit-content;
     /* background-color: pink; */
     font-size: 8vw;
     font-weight: 600;
-    color: green;
+    /* color: green; */
     position: absolute;
     top:35%;
     left:8%;
-    display: none;
 }
 .player2result{
     width:fit-content;
     /* background-color: pink; */
     font-size: 8vw;
     font-weight: 600;
-    color: green;
+    /* color: green; */
     position: absolute;
     top:35%;
     right:8%;
-    display: none;
 }
 
 
@@ -157,5 +162,22 @@ input{
     }
     .container{
         font-size: 5vw;
+    }
+    .player1Corner{
+        font-size: 5vw;
+    }
+    .player2Corner{
+        font-size: 5vw;
+    }
+    .player1result{
+        top:20%;
+        left:12%;
+    }
+    .player2result{
+        top:20%;
+        right:12%;
+    }
+    .content h1{
+        font-size:5vw ;
     }
 }

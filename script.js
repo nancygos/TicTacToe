@@ -8,6 +8,8 @@ let player2Name = document.getElementById('player2Name');
 
 
 // Game box logic
+let player1result = document.getElementById('player1result');
+let player2result = document.getElementById('player2result');
 
 let turn = 'X';
 
@@ -16,8 +18,13 @@ const changeTurn = () =>{
 }
 
 // if win
+let counter = 1;
+
 const checkWin = () => {
-    let contentBox = document.getElementsByClassName('contentBox');
+    let boxes = document.getElementsByClassName('box');
+
+    let roundWin = false;
+    let roundDraw = false;
 
     let win = [
         [0 , 1 , 2],
@@ -27,14 +34,50 @@ const checkWin = () => {
         [2 , 5 , 8],
         [2 , 4 , 6],
         [3 , 4 , 5], 
-        [6 , 7 , 8],    
+        [6 , 7 , 8]  
     ]
 
-    win.forEach(e=>{
-        if((contentBox[e[0]].innerText === contentBox[e[1]].innerText) && (contentBox[e[1]].innerText === contentBox[e[2]].innerText) && (contentBox[e[0]].innerText != " " ) ){
+    // checking logic
+    for(let i=0 ; i<9 ; i++){
+
+        for(let k = 0 ; k<8 ; k++){
+            let a = boxes[win[k][0]].innerText;
+            let b = boxes[win[k][1]].innerText;
+            let c = boxes[win[k][2]].innerText;
+
+            if(a === '' || b === '' || c === ''){
+                continue;
+            }
+            if(a === b && b === c ){
+                roundWin = true;
+                break;
+            }
             
         }
-    })
+
+        if(roundWin){
+            break;
+        }
+    }
+
+    if(!roundWin && counter >= 9){
+        roundDraw = true;
+    }
+    
+    if(roundWin){
+        if(counter%2 === 0){
+            player2result.innerHTML = "WON";
+            // player1result.innerHTML = "Lose";
+        }
+        else{
+            player1result.innerHTML = "WON";
+            // player2result.innerHTML = "Lose";
+        }        
+    }
+    if(roundDraw){
+        player1result.innerHTML = "DRAW";
+        player2result.innerHTML = "DRAW";
+    }
 }
 
 // Take all the boxes
@@ -49,6 +92,7 @@ Array.from(boxes).forEach(element =>{
             changeTurn();
 
             checkWin();
+            counter++;
         }
         
     });
