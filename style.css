@@ -31,14 +31,14 @@ input{
     padding: 5px;
 }
 .btn{
-    width:10vw;
+    width:7vw;
     height:5vh;
     cursor: pointer;
     text-align: center;
-    margin-top: 4vh;
     border-radius: 20px;
     border:none;
     font-weight: 600;
+    margin-top: 2vh;
 }
 .btn:hover{
     background:rgb(162, 204, 235);
@@ -96,11 +96,13 @@ input{
 }
 .r-btn{
     position: absolute;
-    bottom: 10%;
-    left:46%;
-    transform: translate(-10% , -46%);
+    top:80%;
+    left:50%;
+    transform: translate(-50% , -50%);
     font-size: 18px;
     background-image: linear-gradient(45deg , pink , rgb(247, 212, 218));   
+    z-index: 90;
+    
 }
 
 
@@ -158,7 +160,6 @@ input{
     }
     .btn{
         width:20%;
-        transform: translateX(-30%);
     }
     .container{
         font-size: 5vw;
@@ -179,5 +180,8 @@ input{
     }
     .content h1{
         font-size:5vw ;
+    }
+    input{
+        margin:2vh 0;
     }
 }
