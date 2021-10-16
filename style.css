@@ -156,7 +156,7 @@ input{
         grid-template-rows: repeat(3 , 10vw);
     }   
     .base{
-        width:38%;
+        width:50%;
     }
     .btn{
         width:20%;
@@ -183,5 +183,17 @@ input{
     }
     input{
         margin:2vh 0;
+    }
+    .box{
+        padding:6vw;
+        margin:1vw 0 ;
+        position: relative;
+        left:-1vw;
+        top:-1vw;
+    }
+    .container{
+        grid-column-gap:2.5vw;
+        grid-row-gap:1.3vh;
+
     }
 }
