@@ -101,16 +101,18 @@ Array.from(boxes).forEach(element =>{
 // box logic finished
 
 
-
-
-
-
 // reset logic
 reset.addEventListener('click',()=>{
     location.reload();
 });
 
-
+// clear board logic
+let clear = document.getElementById('clear');
+for(let i=0 ; i<9 ; i++){
+    for(let j=0; j<9 ; j++){
+        boxes[i][j] = 0;
+    }
+}
 
 
 // form logic
