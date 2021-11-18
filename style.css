@@ -107,11 +107,11 @@ input{
 @media screen and (max-width:600px) {
     /* clear button position*/
     .clear-position{
-        left: 65%;
+        left: 70%;
     }
     /* resert button position */
     .reset-position{
-        left:40%;
+        left:35%;
     }
 }
 

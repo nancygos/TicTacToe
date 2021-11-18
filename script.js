@@ -115,6 +115,10 @@ clear.addEventListener('click' , ()=>{
     for(let i=0 ; i<9 ; i++){
         boxes[i].innerText = '';
     }
+    player1result.innerHTML = "";
+    player2result.innerHTML = "";
+    counter= 1;
+    
     // alert ('ji');
 });
 
