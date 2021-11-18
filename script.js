@@ -80,7 +80,7 @@ const checkWin = () => {
 
 // Take all the boxes
 let boxes = document.getElementsByClassName('box');
-
+let audio = new Audio('click.wav');
 // convert it into array to use random access
 Array.from(boxes).forEach(element =>{
 
@@ -88,6 +88,7 @@ Array.from(boxes).forEach(element =>{
         if(!element.innerText){
             element.innerText= turn ;
             changeTurn();
+            audio.play();
 
             checkWin();
             counter++;
