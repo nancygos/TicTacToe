@@ -50,14 +50,12 @@ const checkWin = () => {
             }
             if(a === b && b === c ){
                 roundWin = true;
+                counter = 1;
                 break;
             }
             
         }
 
-        if(roundWin){
-            break;
-        }
     }
 
     if(!roundWin && counter >= 9){
@@ -118,6 +116,7 @@ clear.addEventListener('click' , ()=>{
     player1result.innerHTML = "";
     player2result.innerHTML = "";
     counter= 1;
+    turn = 'X';
     
     // alert ('ji');
 });
