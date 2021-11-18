@@ -100,10 +100,20 @@ input{
     z-index: 90;
     
 }
+/* clear button position*/
 .clear-position{
     left: 55%;
 }
-
+@media screen and (max-width:600px) {
+    /* clear button position*/
+    .clear-position{
+        left: 65%;
+    }
+    /* resert button position */
+    .reset-position{
+        left:40%;
+    }
+}
 
 
 
