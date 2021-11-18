@@ -108,11 +108,15 @@ reset.addEventListener('click',()=>{
 
 // clear board logic
 let clear = document.getElementById('clear');
-for(let i=0 ; i<9 ; i++){
-    for(let j=0; j<9 ; j++){
-        boxes[i][j] = 0;
+
+clear.addEventListener('click' , ()=>{
+    // let boxes = document.getElementsByClassName('box');
+
+    for(let i=0 ; i<9 ; i++){
+        boxes[i].innerText = '';
     }
-}
+    // alert ('ji');
+});
 
 
 // form logic
