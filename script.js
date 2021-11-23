@@ -48,9 +48,10 @@ const checkWin = () => {
             if(a === '' || b === '' || c === ''){
                 continue;
             }
-            if(a === b && b === c ){
+
+            // dono null ho tabhi chalega logic
+            if(a === b && b === c && (player2result.innerHTML != 'WON' && player1result.innerHTML != 'WON')){
                 roundWin = true;
-                counter = 1;
                 break;
             }
             
@@ -119,6 +120,8 @@ clear.addEventListener('click' , ()=>{
     counter= 1;
     turn = 'X';
     
+    roundWin = false;
+    roundDraw = false;
     // alert ('ji');
 });
 
